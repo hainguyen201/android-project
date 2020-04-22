@@ -97,7 +97,7 @@ public class EmailItemAdapter extends RecyclerView.Adapter<RecyclerView.ViewHold
         protected FilterResults performFiltering(CharSequence constraint) {
             List<EmailItemModel> filteredList = new ArrayList<>();
 
-            if (constraint == null || constraint.length() == 0) {
+            if (constraint == null || constraint.length() < 3) {
                 filteredList.addAll(itemsAll);
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
